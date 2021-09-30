@@ -1,0 +1,17 @@
+package Chapter1;
+
+import java.util.Scanner;
+
+public class substractionUsingBitwise {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt(),b = sc.nextInt(), c = 0;
+        while(b != 0 ){
+            c = ~a & b;
+            a = a ^ b;
+            b = c << 1;
+        }
+        System.out.println(a);
+    }
+
+}
